@@ -162,3 +162,118 @@ header {
     color: #111827;
 }
 
+.name {
+    position: absolute;
+
+    top: 405px;      
+    left: 54px;     
+
+    color: black;
+}
+
+.name h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+.my_job {
+    position: absolute;
+
+    top: 475px;      
+    left: 54px;     
+
+    color: black;
+}
+
+.my_job h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 600;
+    
+}
+
+.greeting {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #44515f;
+
+    margin-bottom: 20px;   /* adjust this */
+}
+
+
+/* ==========================================================
+   TAGLINE
+========================================================== */
+
+.tagline {
+    position: absolute;
+
+    top: 565px;      /* Move up/down */
+    left: 54px;      /* Move left/right */
+
+    width: 650px;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    color: #5c6875;
+}
+
+/* ==========================
+   STATS CONTAINER
+========================== */
+
+.stats {
+    position: absolute;
+
+    top: 655px;      /* Move up/down */
+    left: 54px;      /* Align with the text */
+
+    display: flex;
+    align-items: center;
+
+    width: 580px;
+    padding: 25px 35px;
+
+    background: #eef2f5;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+/* ==========================
+   EACH STAT
+========================== */
+
+.stat-item{
+    flex:1;
+    text-align:center;
+}
+
+.stat-item h2{
+    font-size:2.3rem;
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:8px;
+}
+
+.stat-item p{
+    font-size:1rem;
+    color:#5c6875;
+}
+
+/* ==========================
+   DIVIDER
+========================== */
+
+.divider{
+    width:1px;
+    height:70px;
+
+    background:#c9d2db;
+}
