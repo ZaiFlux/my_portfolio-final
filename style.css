@@ -8,10 +8,14 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 html,
 body{
     width:100%;
-    height:100%;
+    min-height:100%;
 }
 
 /* ==========================
@@ -20,8 +24,8 @@ body{
 
 body{
 
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
+    overflow-x:hidden;
 
     background:
         radial-gradient(
@@ -57,12 +61,9 @@ body{
 ========================================================== */
 
 .hero{
-
     position:relative;
-
     width:100%;
-    height:100vh;
-
+    min-height:100vh;
     overflow:hidden;
 }
 
@@ -71,209 +72,141 @@ body{
 ========================================================== */
 
 .image-frame{
-
     position:absolute;
-
     right:180px;
-
-    bottom:-140px;     /* Increase to move lower */
-
+    bottom:-140px;
     width:460px;
     height:680px;
-
     background:#f7f7f7;
-
     border-radius:35px;
-
     overflow:hidden;
-
-    box-shadow:
-        0 20px 45px rgba(0,0,0,.15);
-
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
     display:flex;
     justify-content:center;
     align-items:flex-end;
 }
 
-/* ==========================================================
-   IMAGE
-========================================================== */
-
 .image-frame img{
-
     width:100%;
     height:100%;
-
     object-fit:cover;
     object-position:center bottom;
-
     display:block;
 }
 
-
-/* ==========================================================
-   NAVBAR
-========================================================== */
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    z-index: 1000;
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
 }
 
-.navbar {
-    width: 100%;
-    height: 90px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 150px;
+.navbar{
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 150px;
 }
 
-/* ==========================================================
-   NAVIGATION
-========================================================== */
-
-.nav-links {
-    display: flex;
-    gap: 45px;
-
-    list-style: none;
+.nav-links{
+    display:flex;
+    gap:45px;
+    list-style:none;
 }
 
-.nav-links a {
-    text-decoration: none;
-
-    color: #44515f;
-
-    font-size: 1rem;
-    font-weight: 500;
-
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #111827;
-}
-
-.name {
-    position: absolute;
-
-    top: 405px;      
-    left: 54px;     
-
-    color: black;
-}
-
-.name h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-
-.my_job {
-    position: absolute;
-
-    top: 475px;      
-    left: 54px;     
-
-    color: black;
-}
-
-.my_job h1 {
-    margin: 0;
-    font-size: 4rem;
-    font-weight: 600;
-    
-}
-
-.greeting {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #44515f;
-
-    margin-bottom: 20px;   /* adjust this */
-}
-
-
-/* ==========================================================
-   TAGLINE
-========================================================== */
-
-.tagline {
-    position: absolute;
-
-    top: 565px;      /* Move up/down */
-    left: 54px;      /* Move left/right */
-
-    width: 650px;
-
-    font-size: 1.1rem;
-    line-height: 1.8;
-
-    color: #5c6875;
-}
-
-/* ==========================
-   STATS CONTAINER
-========================== */
-
-.stats {
-    position: absolute;
-
-    top: 655px;      /* Move up/down */
-    left: 54px;      /* Align with the text */
-
-    display: flex;
-    align-items: center;
-
-    width: 580px;
-    padding: 25px 35px;
-
-    background: #eef2f5;
-
-    border-radius: 18px;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-}
-
-/* ==========================
-   EACH STAT
-========================== */
-
-.stat-item{
-    flex:1;
-    text-align:center;
-}
-
-.stat-item h2{
-    font-size:2.3rem;
-    font-weight:700;
-
-    color:#111827;
-
-    margin-bottom:8px;
-}
-
-.stat-item p{
+.nav-links a{
+    text-decoration:none;
+    color:#44515f;
     font-size:1rem;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{color:#111827;}
+
+.name{position:absolute;top:405px;left:54px;color:black;}
+.name h1{margin:0;font-size:2rem;font-weight:500;}
+
+.my_job{position:absolute;top:475px;left:54px;color:black;}
+.my_job h1{margin:0;font-size:4rem;font-weight:600;}
+
+.greeting{
+    font-size:1.3rem;
+    font-weight:400;
+    color:#44515f;
+    margin-bottom:20px;
+}
+
+.tagline{
+    position:absolute;
+    top:565px;
+    left:54px;
+    width:650px;
+    font-size:1.1rem;
+    line-height:1.8;
     color:#5c6875;
 }
 
-/* ==========================
-   DIVIDER
-========================== */
+.stats{
+    position:absolute;
+    top:655px;
+    left:54px;
+    display:flex;
+    align-items:center;
+    width:580px;
+    padding:25px 35px;
+    background:#eef2f5;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.stat-item{flex:1;text-align:center;}
+.stat-item h2{font-size:2.3rem;font-weight:700;color:#111827;margin-bottom:8px;}
+.stat-item p{font-size:1rem;color:#5c6875;}
 
 .divider{
     width:1px;
     height:70px;
-
     background:#c9d2db;
+}
+
+/* ==========================================================
+   GLOBAL SECTIONS
+========================================================== */
+
+.about,
+.projects,
+.tech-stack,
+.certificates,
+.contact{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
+    padding-top:120px;
+}
+
+/* ==========================================================
+   COMMON CONTAINER
+========================================================== */
+
+.section-container{
+
+    width:90%;
+    max-width:1400px;
+
+    min-height:100vh;
+
+    margin:0 auto;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
 }
