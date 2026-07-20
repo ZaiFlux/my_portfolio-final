@@ -237,3 +237,295 @@ header{
     max-width:580px;
 
 }
+
+/* ==========================
+   CONTACT GRID
+========================== */
+
+.contact-icons{
+    display:grid;
+    grid-template-columns:320px 320px;
+    column-gap:1rem;   
+    row-gap:.7rem;
+    margin-top:2rem; 
+}
+
+/* ==========================
+   CONTACT CARD
+========================== */
+
+.contact-card{
+
+    display:flex;
+    align-items:center;
+    gap:1.3rem;
+
+    text-decoration:none;
+
+    color:#111827;
+
+    transition:.35s ease;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================
+   GLASS ICON
+========================== */
+
+.contact-card .icon{
+
+    width:68px;
+    height:68px;
+
+    min-width:68px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.25);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08),
+        inset 0 1px 1px rgba(255,255,255,.35);
+
+    transition:.35s ease;
+}
+
+.contact-card .icon i{
+
+    font-size:1.7rem;
+    color:#2563eb;
+
+    transition:.35s ease;
+}
+
+.contact-card:hover .icon{
+
+    background:rgba(37,99,235,.20);
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:
+        0 15px 30px rgba(37,99,235,.25);
+}
+
+.contact-card:hover .icon i{
+
+    color:#ffffff;
+
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.contact-card .info h4{
+
+    font-size:1.05rem;
+    font-weight:700;
+
+    margin-bottom:.3rem;
+
+    color:#111827;
+}
+
+.contact-card .info p{
+
+    font-size:.95rem;
+
+    color:#5B6578;
+
+    line-height:1.5;
+
+    word-break:break-word;
+}
+
+.contact-card .info{
+
+    min-width:0;
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .contact-icons{
+
+        grid-template-columns:1fr;
+
+        gap:1.5rem;
+    }
+
+}
+
+
+.github-showcase{
+
+    width:820px; 
+    height:180px;
+    max-width:100%;
+
+    margin-top:.3rem;
+
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+
+    padding:1.5rem 2rem;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.30);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.08),
+        inset 0 1px 1px rgba(255,255,255,.35);
+}
+/* ==========================
+   LOGO
+========================== */
+
+.github-logo{
+
+    width:10px;
+    height:100px;
+
+    min-width:110px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,.35);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 0 35px rgba(37,99,235,.15);
+}
+
+.github-logo i{
+    font-size:4.3rem;
+}
+
+.github-logo i{
+
+    font-size:5rem;
+
+    color:#111827;
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+
+
+.github-content h2{
+
+    margin-top:.1rem;
+
+    font-size:1rem;
+
+    color:#111827;
+}
+
+.github-content p{
+
+    margin-top:.4rem;
+
+    color:#5b6578;
+
+    line-height:1.5;
+
+    max-width:650px;
+
+    font-size:15px;
+}
+
+
+
+/* ==========================
+   BUTTON
+========================== */
+
+.github-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    margin-top:0.8rem;   
+
+    margin-left:30px;
+
+    padding:15px 34px;
+
+    border-radius:14px;
+
+    background:#111827;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.github-btn:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-4px);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+.github-showcase{
+
+    flex-direction:column;
+
+    text-align:center;
+}
+
+.github-stats{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+}
