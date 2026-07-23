@@ -529,3 +529,128 @@ header{
 }
 
 }
+
+.contact-box{
+
+    position:absolute;
+
+    top:15px;
+
+    right:100px;
+
+    width:520px;
+
+    height:500px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.contact-box{
+
+    position:absolute;
+
+    top:35px;
+    right:100px;
+
+    width:520px;
+    height:560px;
+
+    padding:30px;
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.contact-box h2{
+
+    font-size:1.8rem;
+
+    margin-bottom:20px;
+
+    color:#111827;
+}
+
+.contact-box h2{
+
+    position:relative;
+
+    top:-8px; 
+
+}
+
+.input-group{
+
+    margin-bottom:15px;
+}
+
+.input-group label{
+
+    display:block;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#374151;
+}
+
+.input-group input,
+.input-group textarea{
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:.95rem;
+
+    outline:none;
+}
+
+.input-group textarea{
+
+    height:130px;
+
+    resize:none;
+}
+
+.send-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:-10px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.send-btn:hover{
+
+    background:#2563eb;
+}
