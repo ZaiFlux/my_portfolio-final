@@ -654,3 +654,173 @@ header{
 
     background:#2563eb;
 }
+
+/* ==========================================
+   CERTIFICATES
+========================================== */
+
+.certificates{
+    min-height:100vh;
+    padding-top:120px;
+}
+
+.certificates .section-container{
+    display:flex;
+    align-items:flex-start;
+    gap:60px;
+    padding-left:54px;
+    padding-right:54px;
+}
+
+/* Sidebar */
+
+.certificate-sidebar{
+    width:230px;
+    position:relative;
+    padding-right:40px;
+}
+
+.certificate-sidebar h4{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#6b7280;
+    margin-bottom:25px;
+}
+
+.certificate-categories{
+    list-style:none;
+}
+
+.certificate-categories li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 16px;
+    margin-left:-16px;
+    margin-right:-16px;
+    margin-bottom:10px;
+
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+.certificate-categories li:hover{
+    background:#ffffff;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.certificate-categories span:first-child{
+    font-size:15px;
+    color:#374151;
+}
+
+.count{
+    width:28px;
+    height:28px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    background:#f3f4f6;
+
+    font-size:13px;
+    font-weight:600;
+    color:#6b7280;
+}
+
+.certificate-sidebar::after{
+    content:"";
+
+    position:absolute;
+
+    top:20px;
+    bottom:-50px;
+
+    right:-20px;
+    width:1px;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        #d1d5db 20%,
+        #d1d5db 80%,
+        transparent
+    );
+}
+/* ==========================================
+   EMPTY CERTIFICATE STATE
+========================================== */
+
+.empty-certificates{
+
+    width:100%;
+    min-height:420px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    border:1px dashed #d1d5db;
+    border-radius:20px;
+
+    background:#fcfcfc;
+
+}
+
+.empty-certificates i{
+
+    font-size:58px;
+    color:#9ca3af;
+
+    margin-bottom:25px;
+
+}
+
+.empty-certificates h3{
+
+    font-size:24px;
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+}
+
+.empty-certificates p{
+
+    max-width:430px;
+
+    font-size:15px;
+    line-height:1.8;
+
+    color:#6b7280;
+
+}                                       
+
+.certificate-header{
+    margin:0;
+    padding:0;
+}
+
+.certificate-header > div{
+    margin:0;
+    padding:0;
+}
+
+.certificate-title{
+    margin:0;
+    padding:0;
+    line-height:1.1;
+}
+
+/* ADD THIS */
+.certificate-grid{
+    margin-top:27px;   
+}
