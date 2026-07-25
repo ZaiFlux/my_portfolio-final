@@ -824,3 +824,183 @@ header{
 .certificate-grid{
     margin-top:27px;   
 }
+
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about{
+    width:100%;
+    min-height:100vh;
+    padding-top:0px;
+}
+
+.about .section-container{
+
+    display:grid;
+    grid-template-columns:320px 1fr;
+
+    gap:140px;
+
+    padding:0 260px;
+
+}
+
+/* ==========================================
+   LEFT SIDEBAR
+========================================== */
+
+.about-sidebar{
+
+    position:sticky;
+    top:120px;
+
+    height:fit-content;
+
+
+}
+
+/* Name */
+
+.about-sidebar h1{
+
+    font-size:2rem;
+    font-weight:700;
+
+    color:#111827;
+
+    line-height:1.1;
+
+}
+
+/* Job */
+
+.about-sidebar h2{
+
+    margin-top:1px;
+
+    font-size:1.3rem;
+    font-weight:600;
+
+    color:#2563eb;
+
+}
+
+/* Description */
+
+.about-sidebar p{
+
+    margin-top:15px;
+
+    max-width:290px;
+
+    font-size:0.9rem;
+
+    line-height:1.8;
+
+    color:#5B6578;
+
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.about-nav{
+
+    margin-top:150px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.about-nav a{
+
+    position:relative;
+
+    width:fit-content;
+
+    padding-left:50px;
+
+    text-decoration:none;
+
+    font-size:.7rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-weight:600;
+
+    color:#6B7280;
+
+    transition:.35s ease;
+
+}
+
+/* Left Line */
+
+.about-nav a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:50%;
+
+    width:30px;
+    height:1px;
+
+    background:#9CA3AF;
+
+    transform:translateY(-50%);
+
+    transition:.35s ease;
+
+}
+
+/* Hover */
+
+.about-nav a:hover{
+
+    color:#111827;
+
+    padding-left:70px;
+
+}
+
+.about-nav a:hover::before{
+
+    width:48px;
+
+    background:#111827;
+
+}
+
+/* ==========================================
+   RIGHT CONTENT
+========================================== */
+
+.about-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:180px;
+
+    padding-top:10px;
+
+}
+
+.about-content section{
+
+    min-height:100vh;
+
+}
