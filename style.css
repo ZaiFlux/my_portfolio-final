@@ -1004,3 +1004,79 @@ header{
     min-height:100vh;
 
 }
+
+/* ==========================================
+   FIX TECH STACK POSITION
+========================================== */
+
+
+.tech-stack{
+
+    min-height:100vh;
+
+    padding-top:120px;
+
+}
+
+
+.tech-stack .section-container{
+
+    min-height:auto;
+
+    padding:0 54px;
+
+}
+
+
+
+.tech-header{
+
+    margin-bottom:40px;
+
+}
+
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,180px);
+
+    gap:25px;
+
+    justify-content:center;
+
+}
+
+
+
+.tech-card{
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    background:white;
+
+    border-radius:15px;
+
+}
+
+
+
+.tech-card i{
+
+    font-size:35px;
+    
+
+}
+
+.tech-header h1{
+    text-align:center;
+}
