@@ -86,61 +86,83 @@
     </section>
 
     <!-- ==========================================
-         ABOUT
+         ABOUT - SCROLLABLE SECTION
     =========================================== -->
 
-           <section id="about" class="about">
+    <section id="about" class="about">
 
-            <div class="section-container">
+        <div class="section-container">
 
-                <!-- ==========================
-                    LEFT SIDEBAR
-                ========================== -->
+            <!-- ==========================
+                LEFT SIDEBAR
+            ========================== -->
 
-                <aside class="about-sidebar">
+            <aside class="about-sidebar">
 
-                    <h1>Rodhel Condicion</h1>
+                <h1>Rodhel Condicion</h1>
 
-                    <h2>Cloud Engineer</h2>
+                <h2>Cloud Engineer</h2>
 
+                <p>
+                    Building secure, scalable, and automated cloud
+                    infrastructure using AWS and modern DevOps practices.
+                </p>
+
+                <nav class="about-nav">
+
+                    <a href="#about-intro">About</a>
+
+                    <a href="#journey">Journey</a>
+
+                    <a href="#education">Education</a>
+
+                    <a href="#funfacts">Fun Facts</a>
+
+                </nav>
+
+            </aside>
+
+            <!-- ==========================
+                RIGHT CONTENT - SCROLLABLE BLACK AREA
+            ========================== -->
+
+            <main class="about-content">
+
+                <!-- ===== ABOUT ===== -->
+                <section id="about-intro">
+                    <h2>About</h2>
                     <p>
-                        Building secure, scalable, and automated cloud
-                        infrastructure using AWS and modern DevOps practices.
+                        <span class="highlight">Rodhel Condicion</span> is a Cloud Engineer with a passion for 
+                        infrastructure as code, security, and automation. With deep experience in 
+                        AWS, Terraform, and Kubernetes, he architects resilient systems that scale.
                     </p>
+                </section>
 
-                    <nav class="about-nav">
+                <!-- ===== JOURNEY ===== -->
+                <section id="journey">
+                    <h2>Journey</h2>
+                    <p>
+                        Started as a systems administrator, moved into cloud engineering,
+                        and now specialize in building scalable infrastructure on AWS.
+                    </p>
+                </section>
 
-                        <a href="#about-intro">About</a>
+                <!-- ===== EDUCATION ===== -->
+                <section id="education">
+                    <h2>Education</h2>
+                   
+                </section>
 
-                        <a href="#journey">Journey</a>
+                <!-- ===== FUN FACTS ===== -->
+                <section id="funfacts">
+                    <h2>Fun Facts</h2>
+                </section>
 
-                        <a href="#education">Education</a>
+            </main>
 
-                        <a href="#funfacts">Fun Facts</a>
+        </div>
 
-                    </nav>
-
-                </aside>
-
-                <!-- ==========================
-                    RIGHT CONTENT
-                ========================== -->
-
-                <main class="about-content">
-
-                    <section id="about-intro"></section>
-
-                    <section id="journey"></section>
-
-                    <section id="education"></section>
-
-                    <section id="funfacts"></section>
-
-                </main>
-
-            </div>
-
-        </section>
+    </section>
 
     <!-- ==========================================
          PROJECTS
@@ -150,7 +172,10 @@
 
         <div class="section-container">
 
-            <!-- Projects Here -->
+            <h1 style="color: #111827; font-size: 2.5rem; margin-bottom: 1rem;">Projects</h1>
+            <p style="color: #5B6578; font-size: 1.1rem;">
+                Coming soon — real-world cloud infrastructure projects.
+            </p>
 
         </div>
 
@@ -168,8 +193,7 @@
                 <h1>Technologies and Tools</h1>
             </div>
 
-
-           <div class="tech-grid">
+            <div class="tech-grid">
                 <div class="tech-card">
                     <i class="devicon-amazonwebservices-plain-wordmark"></i>
                     <span>AWS</span>
@@ -223,240 +247,183 @@
         </div>
 
     </section>
-        <!-- ==========================================
-        CERTIFICATES
-        ========================================== -->
 
-        <section id="certificates" class="certificates">
+    <!-- ==========================================
+         CERTIFICATES
+    ========================================== -->
 
-            <div class="section-container">
+    <section id="certificates" class="certificates">
 
-                <!-- ==========================
-                    Sidebar
-                =========================== -->
+        <div class="section-container">
 
-                <aside class="certificate-sidebar">
+            <!-- Sidebar -->
+            <aside class="certificate-sidebar">
 
-                    <h4>Categories</h4>
+                <h4>Categories</h4>
 
-                    <ul class="certificate-categories">
+                <ul class="certificate-categories">
 
-                        <li class="active"
-                            data-category="All Certifications">
+                    <li class="active" data-category="All Certifications">
+                        <span>All Certifications</span>
+                        <span class="count">0</span>
+                    </li>
 
-                            <span>All Certifications</span>
-                            <span class="count">0</span>
+                    <li data-category="AWS Certifications">
+                        <span>AWS</span>
+                        <span class="count">0</span>
+                    </li>
 
-                        </li>
+                    <li data-category="Terraform Certifications">
+                        <span>Terraform</span>
+                        <span class="count">0</span>
+                    </li>
 
-                        <li
-                            data-category="AWS Certifications">
+                    <li data-category="Linux Certifications">
+                        <span>Linux</span>
+                        <span class="count">0</span>
+                    </li>
 
-                            <span>AWS</span>
-                            <span class="count">0</span>
+                    <li data-category="Kubernetes Certifications">
+                        <span>Kubernetes</span>
+                        <span class="count">0</span>
+                    </li>
 
-                        </li>
+                    <li data-category="Security Certifications">
+                        <span>Security</span>
+                        <span class="count">0</span>
+                    </li>
 
-                        <li
-                            data-category="Terraform Certifications">
+                </ul>
 
-                            <span>Terraform</span>
-                            <span class="count">0</span>
+            </aside>
 
-                        </li>
+            <!-- Right Content -->
+            <div class="certificate-content">
 
-                        <li
-                            data-category="Linux Certifications">
-
-                            <span>Linux</span>
-                            <span class="count">0</span>
-
-                        </li>
-
-                        <li
-                            data-category="Kubernetes Certifications">
-
-                            <span>Kubernetes</span>
-                            <span class="count">0</span>
-
-                        </li>
-
-                        <li
-                            data-category="Security Certifications">
-
-                            <span>Security</span>
-                            <span class="count">0</span>
-
-                        </li>
-
-                    </ul>
-
-                </aside>
-
-                <!-- ==========================
-                    Right Content
-                =========================== -->
-
-                <div class="certificate-content">
-
-                    <!-- Header -->
-
-                    <div class="certificate-header">
-
-                        <div>
-
-                            <h2
-                                id="certificate-title"
-                                class="certificate-title">
-
-                                All Certifications
-
-                            </h2>
-
-                       
-
-                        </div>
-
+                <div class="certificate-header">
+                    <div>
+                        <h2 id="certificate-title" class="certificate-title">
+                            All Certifications
+                        </h2>
                     </div>
+                </div>
 
-                    <!-- Grid -->
+                <div class="certificate-grid">
 
-                    <div class="certificate-grid">
-
-                        <!-- Empty State -->
-
-                        <div class="empty-certificates">
-
-                            <i class="fa-solid fa-cloud"></i>
-
-                            <h3>
-                                Building My Certification Journey
-                            </h3>
-
-                            <p>
-                                AWS, Terraform, Linux,
-                                Kubernetes, and Security
-                                certifications will appear
-                                here as I continue advancing
-                                my cloud engineering skills.
-                            </p>
-
-                        </div>
-
+                    <div class="empty-certificates">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h3>Building My Certification Journey</h3>
+                        <p>
+                            AWS, Terraform, Linux, Kubernetes, and Security
+                            certifications will appear here as I continue advancing
+                            my cloud engineering skills.
+                        </p>
                     </div>
 
                 </div>
 
             </div>
 
-        </section>
-   <!-- ==========================================
-     CONTACT
-=========================================== -->
+        </div>
 
-<section id="contact" class="contact">
+    </section>
 
-    <div class="section-container">
+    <!-- ==========================================
+         CONTACT
+    ========================================== -->
 
-        <div class="cta">
+    <section id="contact" class="contact">
 
-            <h1>Let's Build Something Great Together.</h1>
+        <div class="section-container">
 
-            <p>
-                Whether it's a cloud engineering opportunity, DevOps collaboration,
-                internship, or AWS project, I'd love to hear from you.
-            </p>
+            <div class="cta">
 
-            <div class="contact-icons">
+                <h1>Let's Build Something Great Together.</h1>
 
-                <!-- Email -->
-                <a href="mailto:rodhelcondicion@gmail.com" class="contact-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
+                <p>
+                    Whether it's a cloud engineering opportunity, DevOps collaboration,
+                    internship, or AWS project, I'd love to hear from you.
+                </p>
 
-                    <div class="info">
-                        <h4>Email</h4>
-                        <p>rodhelcondicion@gmail.com</p>
-                    </div>
-                </a>
+                <div class="contact-icons">
 
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/share/1TKjH5QuC3/" class="contact-card" target="_blank">
-                    <div class="icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </div>
+                    <!-- Email -->
+                    <a href="mailto:rodhelcondicion@gmail.com" class="contact-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
 
-                    <div class="info">
-                        <h4>Facebook</h4>
-                        <p>Visit my profile</p>
-                    </div>
-                </a>
+                        <div class="info">
+                            <h4>Email</h4>
+                            <p>rodhelcondicion@gmail.com</p>
+                        </div>
+                    </a>
 
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/rodhel-condicion-71061939b" class="contact-card" target="_blank">
-                    <div class="icon">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </div>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/1TKjH5QuC3/" class="contact-card" target="_blank">
+                        <div class="icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
 
-                    <div class="info">
-                        <h4>LinkedIn</h4>
-                        <p>Let's connect</p>
-                    </div>
-                </a>
+                        <div class="info">
+                            <h4>Facebook</h4>
+                            <p>Visit my profile</p>
+                        </div>
+                    </a>
 
-                <!-- Phone -->
-                <a href="tel:+639658064587" class="contact-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/rodhel-condicion-71061939b" class="contact-card" target="_blank">
+                        <div class="icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
 
-                    <div class="info">
-                        <h4>Phone</h4>
-                        <p>+63 965 806 4587</p>
-                    </div>
-                </a>
+                        <div class="info">
+                            <h4>LinkedIn</h4>
+                            <p>Let's connect</p>
+                        </div>
+                    </a>
 
-            </div>
+                    <!-- Phone -->
+                    <a href="tel:+639658064587" class="contact-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
 
-            <!-- ==========================
-                GitHub Showcase
-            ========================== -->
-
-            <div class="github-showcase">
-
-                <div class="github-logo">
-                    <i class="fa-brands fa-github"></i>
-                </div>
-
-                <div class="github-content">
-
-
-                    <h2>Explore My Work on GitHub</h2>
-
-                    <p>
-                        I build secure cloud infrastructure, automate deployments,
-                        and create real-world AWS projects using Terraform,
-                        Docker, Kubernetes, and CI/CD.
-                    </p>
-
-                  
-
-                    <a href="https://github.com/ZaiFlux"
-                    class="github-btn"
-                    target="_blank">
-
-                        Visit My GitHub
-                        <i class="fa-solid fa-arrow-right"></i>
-
+                        <div class="info">
+                            <h4>Phone</h4>
+                            <p>+63 965 806 4587</p>
+                        </div>
                     </a>
 
                 </div>
 
-            </div>
+                <!-- GitHub Showcase -->
+                <div class="github-showcase">
+
+                    <div class="github-logo">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <div class="github-content">
+
+                        <h2>Explore My Work on GitHub</h2>
+
+                        <p>
+                            I build secure cloud infrastructure, automate deployments,
+                            and create real-world AWS projects using Terraform,
+                            Docker, Kubernetes, and CI/CD.
+                        </p>
+
+                        <a href="https://github.com/ZaiFlux" class="github-btn" target="_blank">
+                            Visit My GitHub
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
-
 
             <div class="contact-box">
 
@@ -494,10 +461,9 @@
 
         </div>
 
-</section>
+    </section>
 
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
