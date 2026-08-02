@@ -18,6 +18,26 @@ body{
     min-height:100%;
 }
 
+/* ==========================================
+   HIDE SCROLLBAR BUT KEEP SCROLLING
+   ========================================== */
+
+/* For Chrome, Safari, Edge */
+html::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* For IE and older Edge */
+body {
+    -ms-overflow-style: none;
+}
+
 /* ==========================
    BACKGROUND
 ========================== */
