@@ -114,12 +114,19 @@ body {
     display:block;
 }
 
+/* ==========================================================
+   HOVER-REVEAL NAVIGATION BAR (FIXED - KEEPS LAYOUT)
+========================================================== */
+
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
+    background: transparent;
+    border-bottom: none;
+    transition: all 0.3s ease;
 }
 
 .navbar{
@@ -137,15 +144,58 @@ header{
     list-style:none;
 }
 
+/* ===== EACH NAV LINK - INVISIBLE BY DEFAULT ===== */
 .nav-links a{
     text-decoration:none;
     color:#44515f;
     font-size:1rem;
     font-weight:500;
-    transition:.3s;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0.85);
+    pointer-events: none;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
-.nav-links a:hover{color:#111827;}
+/* ===== REVEAL ON HOVER ===== */
+.nav-links a:hover{
+    opacity: 1;
+    transform: scale(1);
+    color:#111827;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    pointer-events: auto;
+}
+
+/* ===== ACTIVE LINK - ALWAYS VISIBLE ===== */
+.nav-links a.active{
+    opacity: 1;
+    transform: scale(1);
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    pointer-events: auto;
+}
+
+/* ===== HOVER NAVBAR AREA - SHOW ALL LINKS PARTIALLY ===== */
+.navbar:hover .nav-links a{
+    opacity: 0.5;
+    transform: scale(0.95);
+    pointer-events: auto;
+}
+
+.navbar:hover .nav-links a:hover{
+    opacity: 1;
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navbar:hover .nav-links a.active{
+    opacity: 1;
+    transform: scale(1);
+    background: rgba(37, 99, 235, 0.15);
+    color: #2563eb;
+}
 
 .name{position:absolute;top:405px;left:54px;color:black;}
 .name h1{margin:0;font-size:2rem;font-weight:500;}
