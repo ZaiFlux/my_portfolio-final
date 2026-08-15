@@ -311,8 +311,7 @@
         </div>
 
     </section>
-
-    <!-- ==========================================
+<!-- ==========================================
          CERTIFICATES
     ========================================== -->
 
@@ -327,32 +326,32 @@
 
                 <ul class="certificate-categories">
 
-                    <li class="active" data-category="All Certifications">
+                    <li class="active" data-category="All Certifications" onclick="filterCertificates('all')">
                         <span>All Certifications</span>
-                        <span class="count">0</span>
+                        <span class="count">2</span>
                     </li>
 
-                    <li data-category="AWS Certifications">
+                    <li data-category="AWS Certifications" onclick="filterCertificates('aws')">
                         <span>AWS</span>
-                        <span class="count">0</span>
+                        <span class="count">2</span>
                     </li>
 
-                    <li data-category="Terraform Certifications">
+                    <li data-category="Terraform Certifications" onclick="filterCertificates('terraform')">
                         <span>Terraform</span>
                         <span class="count">0</span>
                     </li>
 
-                    <li data-category="Linux Certifications">
+                    <li data-category="Linux Certifications" onclick="filterCertificates('linux')">
                         <span>Linux</span>
                         <span class="count">0</span>
                     </li>
 
-                    <li data-category="Kubernetes Certifications">
+                    <li data-category="Kubernetes Certifications" onclick="filterCertificates('kubernetes')">
                         <span>Kubernetes</span>
                         <span class="count">0</span>
                     </li>
 
-                    <li data-category="Security Certifications">
+                    <li data-category="Security Certifications" onclick="filterCertificates('security')">
                         <span>Security</span>
                         <span class="count">0</span>
                     </li>
@@ -374,7 +373,41 @@
 
                 <div class="certificate-grid">
 
-                    <div class="empty-certificates">
+<!-- Card 1 - AWS Certified Cloud Practitioner (COMPLETED) -->
+<div class="certificate-card completed" data-category="aws">
+    <div class="certificate-card-inner">
+        <div class="certificate-image">
+            <img src="images/certcert.png" 
+                 alt="AWS Certified Cloud Practitioner Badge"
+                 onerror="this.onerror=null; this.src='https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png'">
+        </div>
+        <div class="certificate-text">
+            <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
+            <p class="cert-issuer">Amazon Web Services</p>
+            <p class="cert-date">March 26, 2026</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2 - Getting Started with DevOps on AWS (PLANNED) -->
+<div class="certificate-card" data-category="aws">
+    <div class="certificate-card-inner">
+        <div class="certificate-image">
+            <img src="images/certcert.png" 
+                 alt="Getting Started with DevOps on AWS"
+                 onerror="this.onerror=null; this.src='https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-DevOps-Engineer-Professional_badge.2e5f2b1627c13b7f9d58759073cdbdeaa59b580e.png'">
+        </div>
+        <div class="certificate-text">
+            <h3 class="cert-title">Getting Started with DevOps on AWS</h3>
+            <p class="cert-issuer">Amazon Web Services</p>
+            <p class="cert-date">Coming Soon</p>
+    
+        </div>
+    </div>
+</div>
+
+                    <!-- Empty state message (hidden when cards exist) -->
+                    <div class="empty-certificates" style="display:none;">
                         <i class="fa-solid fa-cloud"></i>
                         <h3>Building My Certification Journey</h3>
                         <p>
@@ -391,7 +424,6 @@
         </div>
 
     </section>
-
     <!-- ==========================================
          CONTACT
     ========================================== -->
