@@ -200,8 +200,8 @@ header{
 .name{position:absolute;top:405px;left:54px;color:black;}
 .name h1{margin:0;font-size:2rem;font-weight:500;}
 
-.my_job{position:absolute;top:475px;left:54px;color:black;}
-.my_job h1{margin:0;font-size:4rem;font-weight:600;}
+.my_job{position:absolute;top:485px;left:54px;color:black;}
+.my_job h1{margin:0;font-size:3rem;font-weight:600;}
 
 .greeting{
     font-size:1.3rem;
@@ -1121,7 +1121,6 @@ header{
 .about-content section {
     min-height: auto;
     padding: 15px 0 30px 0;
-    border-bottom: 1px solid #1f252e;
 }
 
 .about-content section:last-child {
@@ -1357,4 +1356,18 @@ header{
     .about-content h2 {
         font-size: 1.2rem;
     }
+}
+
+/* Justify the About and Journey paragraphs */
+#about-intro p,
+#journey p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Optional: Add better readability */
+#about-intro p,
+#journey p {
+    line-height: 1.8;
+    letter-spacing: 0.02em;
 }
