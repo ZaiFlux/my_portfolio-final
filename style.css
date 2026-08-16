@@ -1601,4 +1601,219 @@ header{
     line-height: 1.8;
     letter-spacing: 0.02em;
 }
+/* ==========================================
+   JOURNEY - TIMELINE (PERFECTLY ALIGNED)
+========================================== */
 
+.journey-timeline {
+    position: relative;
+    padding: 10px 0 10px 0;
+}
+
+/* ── Vertical Line ── */
+.journey-timeline::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 7px;
+    width: 2px;
+    height: calc(100% - 26px);
+    background: #1a1a1a;
+    
+}
+
+/* ── Each Item ── */
+.journey-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 0 28px 0;
+    cursor: default;
+    position: relative;
+}
+
+.journey-item:last-child {
+    padding-bottom: 0;
+}
+
+/* ── REMOVE ALL HORIZONTAL TRACING MARKS ── */
+.journey-item::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* ── Dot Wrapper ── */
+.journey-dot-wrapper {
+    flex-shrink: 0;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ── REMOVE ANY MARKS ON DOT WRAPPER ── */
+.journey-dot-wrapper::before,
+.journey-dot-wrapper::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* ── Dot (Circle) ── */
+.journey-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1.5px #1a1a1a;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.journey-item:hover .journey-dot {
+    background: #2b6f9e;
+    border-color: #2b6f9e;
+    box-shadow: 0 0 0 4px rgba(43, 111, 158, 0.15);
+    transform: scale(1.2);
+}
+
+/* ── Future Item - Completely Clean ── */
+.journey-future .journey-dot {
+    background: #ffffff;
+    border: 2px solid #000000;  /* Changed from dashed to solid */
+    box-shadow: none;
+}
+
+.journey-future:hover .journey-dot {
+    background: #ffffff;
+    border-color: #2b6f9e;
+    box-shadow: 0 0 0 4px rgba(43, 111, 158, 0.15);
+    transform: scale(1.15);
+}
+
+/* ── COMPLETELY REMOVE ALL MARKS ON FUTURE ITEM ── */
+.journey-future::before,
+.journey-future::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* ── Content ── */
+.journey-content {
+    flex: 1;
+    min-width: 0;
+    transition: transform 0.3s ease;
+    padding-top: 2px;
+}
+
+.journey-item:hover .journey-content {
+    transform: translateX(4px);
+}
+
+/* ── Label ── */
+.journey-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2b6f9e;
+    background: rgba(169, 175, 179, 0.08);
+    padding: 2px 14px;
+    border-radius: 20px;
+    margin-bottom: 4px;
+    transition: background 0.3s ease;
+}
+
+.journey-item:hover .journey-label {
+    background: rgba(43, 111, 158, 0.15);
+}
+
+/* ── Title ── */
+.journey-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 2px 0 1px 0;
+}
+
+/* ── Subtitle ── */
+.journey-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    margin: 0 0 4px 0;
+}
+
+/* ── Text (hidden until hover) ── */
+.journey-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(4px);
+    transition: all 0.4s ease;
+    margin-top: 0;
+}
+
+.journey-item:hover .journey-text {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 6px;
+}
+
+.journey-text p {
+    font-size: 14px;
+    font-weight: 350;
+    color: #374151;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+    border-left: 2px solid transparent;
+    padding-left: 14px;
+    transition: border-color 0.4s ease;
+}
+
+.journey-item:hover .journey-text p {
+    border-left-color: rgba(43, 111, 158, 0.25);
+}
+
+/* ── Future Item Special ── */
+.journey-future .journey-label {
+    background: rgba(239, 236, 236, 0.04);
+    color: #6b7280;
+}
+
+.journey-future:hover .journey-label {
+    background: rgba(43, 111, 158, 0.08);
+    color: #2b6f9e;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .journey-item {
+        gap: 14px;
+        padding-bottom: 24px;
+    }
+
+    .journey-dot-wrapper {
+        width: 14px;
+        padding-top: 4px;
+    }
+
+    .journey-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .journey-title {
+        font-size: 15px;
+    }
+
+    .journey-text p {
+        font-size: 13px;
+    }
+}
