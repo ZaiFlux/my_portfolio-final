@@ -10,26 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (aboutNavLinks.length && aboutContent) {
     aboutNavLinks.forEach((link) => {
       link.addEventListener("click", function (e) {
-        e.preventDefault(); // Prevent page jump
+        e.preventDefault();
 
-        // Get the target section ID from href
-        const targetId = this.getAttribute("href").substring(1); // Remove #
+        const targetId = this.getAttribute("href").substring(1);
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
-          // Calculate the scroll position within the about-content container
-          // For "about-intro", scroll to the very top (0)
-          // For others, scroll to their position with offset
           let targetOffset = targetSection.offsetTop;
 
-          // If it's the intro section, scroll to top
           if (targetId === "about-intro") {
             targetOffset = 0;
           } else {
-            targetOffset = targetOffset - 20; // Small offset for better visibility
+            targetOffset = targetOffset - 20;
           }
 
-          // Smooth scroll within the container
           aboutContent.scrollTo({
             top: targetOffset,
             behavior: "smooth",
@@ -38,44 +32,165 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // ==========================================
+  // CERTIFICATES SECTION - FILTERING
+  // ==========================================
+
+  // Get all elements
+  const categories = document.querySelectorAll(".certificate-categories li");
+  const allCards = document.querySelectorAll(".certificate-card");
+  const emptyState = document.querySelector(".empty-certificates");
+  const title = document.getElementById("certificate-title");
+
+  // Function to filter certificates
+  function filterCertificates(category) {
+    let visibleCount = 0;
+
+    // If 'all' is selected, show all cards
+    if (category === "all") {
+      allCards.forEach((card) => {
+        card.style.display = "flex";
+        visibleCount++;
+      });
+      if (emptyState) emptyState.style.display = "none";
+      if (title) title.textContent = "All Certifications";
+    } else {
+      // Otherwise filter by category
+      allCards.forEach((card) => {
+        const cardCategory = card.getAttribute("data-category");
+        if (cardCategory === category) {
+          card.style.display = "flex";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      // Update title with category name
+      if (title) {
+        const categoryMap = {
+          aws: "AWS Certifications",
+          terraform: "Terraform Certifications",
+          linux: "Linux Certifications",
+          kubernetes: "Kubernetes Certifications",
+          security: "Security Certifications",
+          cloud: "Cloud Certifications",
+          devops: "DevOps Certifications",
+        };
+        title.textContent =
+          categoryMap[category] ||
+          category.charAt(0).toUpperCase() +
+            category.slice(1) +
+            " Certifications";
+      }
+
+      // Show/hide empty state
+      if (emptyState) {
+        if (visibleCount === 0) {
+          emptyState.style.display = "flex";
+        } else {
+          emptyState.style.display = "none";
+        }
+      }
+    }
+
+    // Update category counts
+    updateCounts();
+  }
+
+  // Function to update counts
+  function updateCounts() {
+    categories.forEach((category) => {
+      const categoryType = category.getAttribute("data-category");
+      const countSpan = category.querySelector(".count");
+
+      if (categoryType === "all") {
+        // Count all certificates
+        const total = document.querySelectorAll(".certificate-card").length;
+        if (countSpan) countSpan.textContent = total;
+      } else {
+        // Count only matching category
+        const count = document.querySelectorAll(
+          `.certificate-card[data-category="${categoryType}"]`,
+        ).length;
+        if (countSpan) countSpan.textContent = count;
+      }
+    });
+  }
+
+  // Add click event to each category
+  categories.forEach((category) => {
+    category.addEventListener("click", function () {
+      // Remove active class from all
+      categories.forEach((item) => item.classList.remove("active"));
+
+      // Add active class to clicked
+      this.classList.add("active");
+
+      // Get category from data attribute
+      const categoryType = this.getAttribute("data-category");
+
+      // Filter certificates
+      filterCertificates(categoryType);
+    });
+  });
+
+  // Initialize - show all certificates
+  filterCertificates("all");
 });
 
-// ==========================================
-// CERTIFICATES SECTION
-// ==========================================
+// Make filterCertificates globally accessible for onclick attributes
+function filterCertificates(category) {
+  // This will be replaced by the DOMContentLoaded version
+  // But we keep it for compatibility with onclick attributes
+  const allCards = document.querySelectorAll(".certificate-card");
+  const emptyState = document.querySelector(".empty-certificates");
+  const title = document.getElementById("certificate-title");
 
-const categories = document.querySelectorAll(".certificate-categories li");
-const title = document.getElementById("certificate-title");
-// Make sure subtitle is defined
-const subtitle =
-  document.querySelector(".certificate-subtitle") ||
-  document.createElement("p");
+  if (category === "all") {
+    allCards.forEach((card) => {
+      card.style.display = "flex";
+    });
+    if (emptyState) emptyState.style.display = "none";
+    if (title) title.textContent = "All Certifications";
+  } else {
+    let visibleCount = 0;
+    allCards.forEach((card) => {
+      const cardCategory = card.getAttribute("data-category");
+      if (cardCategory === category) {
+        card.style.display = "flex";
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+      }
+    });
 
-categories.forEach((category) => {
-  category.addEventListener("click", () => {
-    // Remove active class
-    categories.forEach((item) => item.classList.remove("active"));
+    const categoryMap = {
+      aws: "AWS Certifications",
+      terraform: "Terraform Certifications",
+      linux: "Linux Certifications",
+      kubernetes: "Kubernetes Certifications",
+      security: "Security Certifications",
+      programming: "Programming Certifications",
+    };
+    if (title)
+      title.textContent =
+        categoryMap[category] ||
+        category.charAt(0).toUpperCase() +
+          category.slice(1) +
+          " Certifications";
 
-    // Add active class
-    category.classList.add("active");
+    if (emptyState) {
+      emptyState.style.display = visibleCount === 0 ? "flex" : "none";
+    }
+  }
 
-    // Update heading
-    title.textContent = category.dataset.category;
-
-    // Update subtitle using the count
-    const count = category.querySelector(".count").textContent;
-
-    // Check if subtitle exists, if not create one
-    if (document.querySelector(".certificate-subtitle")) {
-      document.querySelector(".certificate-subtitle").textContent =
-        count + (count === "1" ? " Certificate" : " Certificates");
-    } else {
-      // Create subtitle if it doesn't exist
-      const sub = document.createElement("p");
-      sub.className = "certificate-subtitle";
-      sub.textContent =
-        count + (count === "1" ? " Certificate" : " Certificates");
-      title.parentNode.appendChild(sub);
+  // Update active state
+  document.querySelectorAll(".certificate-categories li").forEach((item) => {
+    item.classList.remove("active");
+    if (item.getAttribute("data-category") === category) {
+      item.classList.add("active");
     }
   });
-});
+}
