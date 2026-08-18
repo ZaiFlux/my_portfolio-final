@@ -1,0 +1,124 @@
+/* ==========================
+   BACKGROUND
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 18% 20%,
+            rgba(255,255,255,0.65) 0%,
+            rgba(255,255,255,0) 35%
+        ),
+        radial-gradient(
+            circle at 85% 18%,
+            rgba(255,255,255,0.55) 0%,
+            rgba(255,255,255,0) 30%
+        ),
+        radial-gradient(
+            circle at 50% 45%,
+            #d8dfe6 0%,
+            #d0d8e0 40%,
+            #c6d0da 70%,
+            #bcc7d2 100%
+        );
+
+    background-color: #cfd7df;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: flex-start;  /* Changed from 'center' to 'flex-start' */
+    align-items: center;
+    padding: 40px;
+}
+
+/* ==========================
+   RECTANGLE CONTAINER
+========================== */
+
+.cert-container {
+    width: 100%;
+    max-width: 775px;
+    min-height: 480px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+.cert_title {
+    font-size: 1.8rem;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* === MARGIN (spacing OUTSIDE the element) === */
+    margin-top: 5px;        /* Space above */
+    margin-bottom: 25px;    /* Space below - pushes details down */
+    margin-left: 0;         /* Space from left */
+    margin-right: 0;        /* Space from right */
+    
+    /* Shorthand: margin: top right bottom left; */
+    /* margin: 5px 0 25px 0; */
+    
+    /* === PADDING (spacing INSIDE the element) === */
+    padding-top: 0px;      /* Space inside at top */
+    padding-bottom: 0px;   /* Space inside at bottom - pushes border down */
+    padding-left: 0px;        /* Space inside from left */
+    padding-right: 140px;       /* Space inside from right */
+    
+    /* Shorthand: padding: top right bottom left; */
+    /* padding: 10px 0 12px 0; */
+
+}
+.details {
+    padding-bottom: 345px;
+}
+
+.cert_title i {
+    color: #2563eb;
+}
+
+.skills {
+    font-size: 1rem;
+
+}
+
+.provider {
+    font-size: 1rem;
+
+}
+
+.issuer_date {
+    font-size: 1rem;
+
+}
+
+.credential_id {
+    font-size: 1rem;
+
+}
+
+.verification_link {
+    font-size: 1rem;
+
+}
+
