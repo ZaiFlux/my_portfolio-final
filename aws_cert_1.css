@@ -63,38 +63,19 @@ body {
     margin-right: auto;
 }
 
-.cert_title {
-    font-size: 1.8rem;
-    color: #111827;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    
-    /* === MARGIN (spacing OUTSIDE the element) === */
-    margin-top: 5px;        /* Space above */
-    margin-bottom: 25px;    /* Space below - pushes details down */
-    margin-left: 0;         /* Space from left */
-    margin-right: 0;        /* Space from right */
-    
-    /* Shorthand: margin: top right bottom left; */
-    /* margin: 5px 0 25px 0; */
-    
-    /* === PADDING (spacing INSIDE the element) === */
-    padding-top: 0px;      /* Space inside at top */
-    padding-bottom: 0px;   /* Space inside at bottom - pushes border down */
-    padding-left: 0px;        /* Space inside from left */
-    padding-right: 140px;       /* Space inside from right */
-    
-    /* Shorthand: padding: top right bottom left; */
-    /* padding: 10px 0 12px 0; */
 
-}
 .details {
-    padding-bottom: 345px;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom:90px;
+    margin-right: 70px;
+    margin-bottom: -50px;
 
+}
 .cert_title i {
     color: #2563eb;
+    font-size: 1.8rem;
 }
 
 .skills {
