@@ -8,17 +8,11 @@ Once I finish polishing everything, I'll deploy it and make it live.
 
 **Stay tuned, AHAHAHA!** 😄
 
----
-
 ## 🛠️ Built With
 
 - HTML, CSS, JavaScript
 - Responsive Design
 
----
-
 ## 📫 Connect With Me
-
----
 
 **Made with 🤍**
