@@ -38,41 +38,36 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    justify-content: flex-start;  /* Changed from 'center' to 'flex-start' */
+    justify-content: center;  /* CHANGED from 'flex-start' to 'center' */
     align-items: center;
     padding: 40px;
 }
 
 /* ==========================
-   RECTANGLE CONTAINER
+   BADGE - SAME PLACEMENT
 ========================== */
 
-.cert-container {
-    width: 100%;
-    max-width: 770px;
-    min-height: 480px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 0px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-    padding: 35px;
-
+.badge {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.8);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     margin-left: 30px;
-    margin-right: auto;
+    flex-shrink: 0;
 }
-
 
 .details {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding-bottom:90px;
+    padding-bottom: 90px;
     margin-right: 70px;
     margin-bottom: -50px;
-
+    margin-left: 30px;
 }
+
 .cert_title i {
     color: #2563eb;
     font-size: 1.8rem;
@@ -80,26 +75,20 @@ body {
 
 .skills {
     font-size: 1rem;
-
 }
 
 .provider {
     font-size: 1rem;
-
 }
 
 .issuer_date {
     font-size: 1rem;
-
 }
 
 .credential_id {
     font-size: 1rem;
-
 }
 
 .verification_link {
     font-size: 1rem;
-
 }
-

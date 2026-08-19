@@ -38,25 +38,25 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    justify-content: flex-start;  /* Changed from 'center' to 'flex-start' */
+    justify-content: flex-start;
     align-items: center;
     padding: 40px;
 }
 
 /* ==========================
-   RECTANGLE CONTAINER
+   RECTANGLE CONTAINER - NOW INVISIBLE
 ========================== */
 
 .cert-container {
     width: 100%;
     max-width: 770px;
     min-height: 480px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: transparent;  /* Changed to transparent */
+    backdrop-filter: none;    /* Removed blur effect */
+    -webkit-backdrop-filter: none;
     border-radius: 0px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    border: none;            /* Removed border */
+    box-shadow: none;        /* Removed shadow */
     padding: 35px;
 
     margin-left: 30px;
@@ -102,4 +102,3 @@ body {
     font-size: 1rem;
 
 }
-
