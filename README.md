@@ -1,4 +1,4 @@
-# 🚀 My Portfolio
+# My Portfolio 🍟
 
 > ⚠️ **UNDER DEVELOPMENT** ⚠️
 
@@ -6,7 +6,7 @@ This is my latest portfolio — currently in active development. I'm putting in 
 
 Once I finish polishing everything, I'll deploy it and make it live.
 
-**Stay tuned, AHAHAHA!** 😄
+**Stay tuned, AHAHAHAHA** 😄
 
 ## 🛠️ Built With
 - HTML, CSS, JavaScript
