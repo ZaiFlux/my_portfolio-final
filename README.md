@@ -12,6 +12,5 @@ Once I finish polishing everything, I'll deploy it and make it live.
 - HTML, CSS, JavaScript
 - Responsive Design
 
-## 📫 Connect With Me
 
 **Made with 🤍**
