@@ -1,0 +1,178 @@
+/* ==========================
+   BACKGROUND
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 18% 20%,
+            rgba(255,255,255,0.65) 0%,
+            rgba(255,255,255,0) 35%
+        ),
+        radial-gradient(
+            circle at 85% 18%,
+            rgba(255,255,255,0.55) 0%,
+            rgba(255,255,255,0) 30%
+        ),
+        radial-gradient(
+            circle at 50% 45%,
+            #d8dfe6 0%,
+            #d0d8e0 40%,
+            #c6d0da 70%,
+            #bcc7d2 100%
+        );
+
+    background-color: #cfd7df;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* ==========================
+   BADGE - SAME AS IBM
+========================== */
+
+.badge {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.8);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin-left: 30px;
+    flex-shrink: 0;
+    background: #cfd7df;
+    mix-blend-mode: multiply;
+}
+
+/* ==========================
+   DETAILS SECTION - SAME AS IBM
+========================== */
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 90px;
+    margin-right: 70px;
+    margin-bottom: -50px;
+    margin-left: 30px;
+}
+
+/* REMOVED: .cert_title i */
+
+.cert_title {
+    font-size: 1.8rem;
+    color: #1a2332;
+}
+
+.skills {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.provider {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.issuer_date {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.credential_id {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.verification_link {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.verification_link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.verification_link a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.verification_link a i {
+    color: #22c55e;
+}
+
+/* ==========================
+   RESPONSIVE - SAME AS IBM
+========================== */
+
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .badge {
+        margin-left: 0;
+        width: 120px;
+        height: 120px;
+    }
+
+    .details {
+        margin-right: 0;
+        margin-left: 0;
+        padding-bottom: 20px;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .badge {
+        width: 100px;
+        height: 100px;
+    }
+
+    .details {
+        gap: 15px;
+    }
+
+    .cert_title {
+        font-size: 1.2rem;
+    }
+
+    .provider,
+    .issuer_date,
+    .credential_id,
+    .skills,
+    .verification_link {
+        font-size: 0.85rem;
+    }
+}
