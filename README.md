@@ -1,15 +1,32 @@
-<h1 style="border-bottom: none;">My Portfolio 🍟</h1>
+<div align="center">
 
-## UNDER DEVELOPMENT
+<h1 style="border: 0; border-bottom: 0; padding-bottom: 0;">
+My Portfolio 🍟
+</h1>
 
-This is my latest portfolio — currently in active development. I'm putting in the work to make it look clean, professional, and worthy of the skills I've earned.
+<p><strong>UNDER DEVELOPMENT</strong></p>
 
+<p>
+This is my latest portfolio — currently in active development.
+I'm putting in the work to make it look clean, professional,
+and worthy of the skills I've earned.
+</p>
+
+<p>
 Once I finish polishing everything, I'll deploy it and make it live.
+</p>
 
-**Stay tuned, AHAHAHAHA** 🎉
+<p><strong>Stay tuned, AHAHAHAHA 🎉</strong></p>
 
-### Built With
-- HTML, CSS, JavaScript
-- Responsive Design
+<h3 style="border: 0; border-bottom: 0;">
+Built With
+</h3>
 
-**Made with ❤️**
+<p>
+HTML · CSS · JavaScript<br>
+Responsive Design
+</p>
+
+<p><strong>Made with ❤️</strong></p>
+
+</div>
