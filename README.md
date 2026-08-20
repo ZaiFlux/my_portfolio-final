@@ -1,4 +1,4 @@
-<h1 style="border-bottom: none;">My Portfolio</h1>
+<h1 style="border-bottom: none;">My Portfolio 🍟</h1>
 
 ## UNDER DEVELOPMENT
 
