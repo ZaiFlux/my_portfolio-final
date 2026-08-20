@@ -1,4 +1,4 @@
-**My Portfolio 🍟**
+<h1 align="center" style="border-bottom: none;">My Portfolio 🍟</h1>
 
 **⚠️ UNDER DEVELOPMENT ⚠️**
 
