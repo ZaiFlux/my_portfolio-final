@@ -1,6 +1,6 @@
-## My Portfolio 🍟
+**My Portfolio 🍟**
 
-> **⚠️ UNDER DEVELOPMENT ⚠️**
+**⚠️ UNDER DEVELOPMENT ⚠️**
 
 This is my latest portfolio — currently in active development. I'm putting in the work to make it look clean, professional, and worthy of the skills I've earned.
 
