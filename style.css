@@ -734,8 +734,7 @@ header{
 .certificates {
     min-height: 100vh;
     height: auto;
-    padding-top: 160px;
-    padding-top: 110px;
+    padding-top: 125px;
     overflow: visible;
     padding-left: 160px;
 
@@ -836,6 +835,8 @@ header{
         height: 580px;
         overflow-y: auto;
         padding-right: 10px;
+        padding-top: 40px;      /* buffer stays */
+        margin-top: -40px;      
         scrollbar-width: none;  /* Firefox */
         -ms-overflow-style: none;  /* IE/Edge */
     }
@@ -868,6 +869,7 @@ header{
     max-width: 920px;  /* ← ADD THIS - controls card width */
     margin-left: auto;  /* ← ADD THIS - centers the grid */
     margin-right: auto; /* ← ADD THIS - centers the grid */
+    
 }
 /* Certificate Card - Smaller to fit 2 rows */
 .certificate-card {
@@ -1873,13 +1875,11 @@ header{
 
 /* ===== FIX: CARDS HOVER FREELY ===== */
 .certificate-content {
-    overflow: visible !important;
-}
-
-.certificate-card {
-    overflow: visible !important;
+    overflow-y: auto;
 }
 
 .certificate-card:hover {
     z-index: 9999 !important;
 }
+
+
