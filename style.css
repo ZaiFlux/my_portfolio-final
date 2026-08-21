@@ -733,9 +733,12 @@ header{
 
 .certificates {
     min-height: 100vh;
-    height: 100vh;
-    padding-top: 120px;
-    overflow: hidden;
+    height: auto;
+    padding-top: 160px;
+    padding-top: 110px;
+    overflow: visible;
+    padding-left: 160px;
+
 }
 
 .certificates .section-container {
@@ -744,8 +747,9 @@ header{
     gap: 60px;
     padding-left: 54px;
     padding-right: 54px;
-    height: calc(100vh - 120px);
-    overflow: hidden;
+    min-height: calc(100vh - 100px);
+    height: auto;
+    overflow: visible;
 }
 
 /* Sidebar */
@@ -825,18 +829,29 @@ header{
     );
 }
 
-/* Certificate content - scrollable with hidden scrollbar */
+/* Certificate content - scrollable with visible scrollbar */
+/* Certificate content - scrollable with HIDDEN scrollbar */
 .certificate-content {
     flex: 1;
-    height: 100%;
+    height: 580px;
     overflow-y: auto;
     padding-right: 10px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
 }
 
 .certificate-content::-webkit-scrollbar {
-    display: none;
+    display: none;  /* Chrome/Safari/Edge */
+    width: 0;
+    background: transparent;
+}
+.certificate-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.certificate-content::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* ==========================================
@@ -844,32 +859,44 @@ header{
 ========================================== */
 
 .certificate-grid {
-    margin-top: 27px;
+    margin-top: 0px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding-right: 180px;
     padding-bottom: 20px;
+    max-width: 920px;  /* ← ADD THIS - controls card width */
+    margin-left: auto;  /* ← ADD THIS - centers the grid */
+    margin-right: auto; /* ← ADD THIS - centers the grid */
 }
-
-/* Certificate Card - YOUR ORIGINAL */
+/* Certificate Card - Smaller to fit 2 rows */
 .certificate-card {
     background: #ffffff;
     border-radius: 16px;
     border: 1px solid #e5e7eb;
     padding: 0;
     transition: all 0.3s ease;
-    cursor: default;
+    cursor: pointer;
     position: relative;
-    height: 300px;
-    max-height: 360px;
+    height: 220px;
+    max-height: 240px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
 }
 
-.certificate-card.completed:hover {
+/* GREEN HOVER EFFECT FOR ALL CARDS */
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(22, 163, 74, 0.15);
     border-color: #4ade80;
-    box-shadow: 0 12px 30px rgba(22, 163, 74, 0.1);
+}
+
+/* Click animation */
+.certificate-card:active {
+    transform: scale(0.97);
 }
 
 .certificate-card-inner {
@@ -881,15 +908,12 @@ header{
     height: 100%;
 }
 
-/* ==========================================
-   CERTIFICATE IMAGE - YOUR ORIGINAL
-========================================== */
-
+/* Certificate Image - Smaller */
 .certificate-image {
     width: 100%;
-    height: 210px;
-    min-height: 210px;
-    max-height: 210px;
+    height: 140px;
+    min-height: 140px;
+    max-height: 140px;
     flex-shrink: 0;
     flex: 0 0 auto;
     display: flex;
@@ -898,7 +922,7 @@ header{
     background: #f8fafc;
     overflow: hidden;
     border-radius: 16px 16px 0 0;
-    padding: 10px;
+    padding: 8px;
     position: relative;
 }
 
@@ -909,17 +933,14 @@ header{
     display: block;
 }
 
-/* ==========================================
-   CERTIFICATE TEXT - YOUR ORIGINAL
-========================================== */
-
+/* Certificate Text - Smaller */
 .certificate-text {
-    padding: 12px 24px 8px 24px;
+    padding: 6px 16px 4px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 2px;
     flex: 0;
     background: #ffffff;
     width: 100%;
@@ -928,16 +949,16 @@ header{
 }
 
 .cert-title {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     color: #111827;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.3;
     padding: 0 4px;
 }
 
 .cert-issuer {
-    font-size: 13px;
+    font-size: 11px;
     color: #6b7280;
     margin: 0;
     font-weight: 500;
@@ -945,7 +966,7 @@ header{
 }
 
 .cert-date {
-    font-size: 12px;
+    font-size: 10px;
     color: #9ca3af;
     margin: 0;
     padding: 0 4px;
@@ -1010,7 +1031,7 @@ header{
 }
 
 /* ==========================================
-   RESPONSIVE - YOUR ORIGINAL
+   RESPONSIVE
 ========================================== */
 
 @media (max-width: 1024px) {
@@ -1077,22 +1098,22 @@ header{
     }
 
     .certificate-card {
-        height: 320px;
-        min-height: 320px;
-        max-height: 320px;
+        height: 280px;
+        min-height: 280px;
+        max-height: 280px;
     }
 
     .certificate-image {
-        height: 180px;
-        min-height: 180px;
-        max-height: 180px;
+        height: 170px;
+        min-height: 170px;
+        max-height: 170px;
         padding: 8px;
     }
 
     .certificate-text {
-        padding: 14px 18px 16px 18px;
-        gap: 5px;
-        min-height: 80px;
+        padding: 10px 18px 12px 18px;
+        gap: 4px;
+        min-height: 70px;
     }
 
     .cert-title {
@@ -1107,6 +1128,8 @@ header{
         font-size: 11px;
     }
 }
+
+
 
 @media (max-width: 480px) {
     .certificates {
@@ -1129,34 +1152,34 @@ header{
     }
 
     .certificate-card {
-        height: 280px;
-        min-height: 280px;
-        max-height: 280px;
+        height: 240px;
+        min-height: 240px;
+        max-height: 240px;
     }
 
     .certificate-image {
-        height: 150px;
-        min-height: 150px;
-        max-height: 150px;
+        height: 140px;
+        min-height: 140px;
+        max-height: 140px;
         padding: 6px;
     }
 
     .certificate-text {
-        padding: 12px 14px 14px 14px;
-        gap: 4px;
-        min-height: 70px;
+        padding: 8px 14px 10px 14px;
+        gap: 3px;
+        min-height: 60px;
     }
 
     .cert-title {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .cert-issuer {
-        font-size: 11px;
+        font-size: 10px;
     }
     
     .cert-date {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 /* ==========================================
