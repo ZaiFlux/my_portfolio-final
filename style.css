@@ -831,14 +831,14 @@ header{
 
 /* Certificate content - scrollable with visible scrollbar */
 /* Certificate content - scrollable with HIDDEN scrollbar */
-.certificate-content {
-    flex: 1;
-    height: 580px;
-    overflow-y: auto;
-    padding-right: 10px;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none;  /* IE/Edge */
-}
+    .certificate-content {
+        flex: 1;
+        height: 580px;
+        overflow-y: auto;
+        padding-right: 10px;
+        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;  /* IE/Edge */
+    }
 
 .certificate-content::-webkit-scrollbar {
     display: none;  /* Chrome/Safari/Edge */
@@ -1869,4 +1869,17 @@ header{
     .journey-text p {
         font-size: 13px;
     }
+}
+
+/* ===== FIX: CARDS HOVER FREELY ===== */
+.certificate-content {
+    overflow: visible !important;
+}
+
+.certificate-card {
+    overflow: visible !important;
+}
+
+.certificate-card:hover {
+    z-index: 9999 !important;
 }
