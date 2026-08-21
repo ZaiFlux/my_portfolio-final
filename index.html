@@ -449,18 +449,22 @@
 
                 <div class="certificate-grid">
 
-                    <!-- Card 1 - AWS Certified Cloud Practitioner (COMPLETED) -->
-                    <div class="certificate-card completed" data-category="aws">
+                    <!-- Card 1 - AWS Certified Cloud Practitioner (COMPLETED) - CLICKABLE -->
+                    <div class="certificate-card completed" data-category="aws" onclick="window.location.href='aws_cert_1.html'" style="cursor: pointer;">
                         <div class="certificate-card-inner">
                             <div class="certificate-image">
                                 <img src="images/certcert.png" 
-                                     alt="AWS Certified Cloud Practitioner Badge"
-                                     onerror="this.onerror=null; this.src='https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png'">
+                                    alt="AWS Certified Cloud Practitioner Badge"
+                                    onerror="this.onerror=null; this.src='https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png'">
                             </div>
                             <div class="certificate-text">
                                 <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
                                 <p class="cert-issuer">Amazon Web Services</p>
                                 <p class="cert-date">March 26, 2026</p>
+                                <!-- Optional: Add a click indicator -->
+                                <p style="color: #2563eb; font-size: 0.85rem; margin-top: 8px;">
+                                    <i class="fa-solid fa-arrow-right"></i> Click to view certificate
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -481,54 +485,69 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 - Linux Certification (PLANNED) -->
-                    <div class="certificate-card" data-category="linux">
+                  <!-- Card 3 - AWS Getting Started With DevOps (PLANNED) - CLICKABLE -->
+                    <div class="certificate-card clickable" data-category="aws" onclick="window.location.href='aws_cert_2.html'" style="cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <div class="certificate-card-inner">
                             <div class="certificate-image">
-                                <img src="images/cert2.png" 
-                                     alt="Linux Certification Badge"
-                                     onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/333/fff?text=Linux'">
+                                <img src="images/cert1.png" 
+                                    alt="AWS Getting Started With DevOps Badge"
+                                    onerror="this.onerror=null; this.src='https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-DevOps-Engineer-Professional_badge.2e5f2b1627c13b7f9d58759073cdbdeaa59b580e.png'">
                             </div>
                             <div class="certificate-text">
-                                <h3 class="cert-title">Introduction to Linux</h3>
-                                <p class="cert-issuer">Linux Foundation</p>
+                                <h3 class="cert-title">Getting Started With DevOps</h3>
+                                <p class="cert-issuer">AWS</p>
                                 <p class="cert-date">Coming Soon</p>
+                                <!-- Click indicator -->
+                                <div style="margin-top: 10px; display: flex; align-items: center; gap: 6px; color: #2563eb; font-size: 0.85rem; font-weight: 500;">
+                                    <span>View Certificate</span>
+                                    <i class="fa-solid fa-arrow-right" style="transition: transform 0.3s ease;"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 4 - Kubernetes Certification (PLANNED) -->
-                    <div class="certificate-card" data-category="kubernetes">
+                    <!-- Card 4 - Kubernetes Certification (PLANNED) - CLICKABLE -->
+                    <div class="certificate-card clickable" data-category="kubernetes" onclick="window.location.href='lf_2.html'" style="cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <div class="certificate-card-inner">
                             <div class="certificate-image">
                                 <img src="images/cert3.png" 
-                                     alt="Kubernetes Certification Badge"
-                                     onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/326ce5/fff?text=K8s'">
+                                    alt="Kubernetes Certification Badge"
+                                    onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/326ce5/fff?text=K8s'">
                             </div>
                             <div class="certificate-text">
                                 <h3 class="cert-title">Introduction to Kubernetes</h3>
                                 <p class="cert-issuer">Cloud Native Computing Foundation</p>
                                 <p class="cert-date">Coming Soon</p>
+                                <!-- Click indicator -->
+                                <div style="margin-top: 10px; display: flex; align-items: center; gap: 6px; color: #2563eb; font-size: 0.85rem; font-weight: 500;">
+                                    <span>View Certificate</span>
+                                    <i class="fa-solid fa-arrow-right" style="transition: transform 0.3s ease;"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 5 - Security Certification (PLANNED) -->
-                    <div class="certificate-card" data-category="security">
+                    <!-- Card 5 - Security Certification (PLANNED) - CLICKABLE -->
+                    <div class="certificate-card clickable" data-category="security" onclick="window.location.href='ibm_cert_1.html'" style="cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <div class="certificate-card-inner">
                             <div class="certificate-image">
                                 <img src="images/cert4.png" 
-                                     alt="Security Certification Badge"
-                                     onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/dc3545/fff?text=Security'">
+                                    alt="Security Certification Badge"
+                                    onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/dc3545/fff?text=Security'">
                             </div>
                             <div class="certificate-text">
                                 <h3 class="cert-title">Cybersecurity Fundamentals</h3>
                                 <p class="cert-issuer">(ISC)² / CompTIA</p>
                                 <p class="cert-date">Coming Soon</p>
+                                <!-- Click indicator -->
+                                <div style="margin-top: 10px; display: flex; align-items: center; gap: 6px; color: #2563eb; font-size: 0.85rem; font-weight: 500;">
+                                    <span>View Certificate</span>
+                                    <i class="fa-solid fa-arrow-right" style="transition: transform 0.3s ease;"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                    
                     <!-- Card 6 - Security Certification (PLANNED) -->
                     <div class="certificate-card" data-category="security">
                         <div class="certificate-card-inner">
