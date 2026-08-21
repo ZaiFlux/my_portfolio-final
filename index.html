@@ -547,39 +547,48 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Card 6 - Security Certification (PLANNED) -->
-                    <div class="certificate-card" data-category="security">
-                        <div class="certificate-card-inner">
-                            <div class="certificate-image">
-                                <img src="images/cert5.png" 
-                                     alt="Security Certification Badge"
-                                     onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/dc3545/fff?text=Security'">
+                   
+                    <!-- Card 6 - Security Certification (PLANNED) - CLICKABLE -->
+                        <div class="certificate-card clickable" data-category="security" onclick="window.location.href='cisco_cert_1.html'" style="cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <div class="certificate-card-inner">
+                                <div class="certificate-image">
+                                    <img src="images/cert5.png" 
+                                        alt="Security Certification Badge"
+                                        onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/dc3545/fff?text=Security'">
+                                </div>
+                                <div class="certificate-text">
+                                    <h3 class="cert-title">Cyber Threat Management</h3>
+                                    <p class="cert-issuer">(ISC)² / CompTIA</p>
+                                    <p class="cert-date">Coming Soon</p>
+                                    <!-- Click indicator -->
+                                    <div style="margin-top: 10px; display: flex; align-items: center; gap: 6px; color: #2563eb; font-size: 0.85rem; font-weight: 500;">
+                                        <span>View Certificate</span>
+                                        <i class="fa-solid fa-arrow-right" style="transition: transform 0.3s ease;"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="certificate-text">
-                                <h3 class="cert-title">Cyber Threat Management</h3>
-                                <p class="cert-issuer">(ISC)² / CompTIA</p>
-                                <p class="cert-date">Coming Soon</p>
+                        </div>
+                        
+             <!-- Card 7 - Programming Certification (PLANNED) - CLICKABLE -->
+                <div class="certificate-card clickable" data-category="programming" onclick="window.location.href='cisco_cert_2.html'" style="cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="certificate-card-inner">
+                        <div class="certificate-image">
+                            <img src="images/cert7.png" 
+                                alt="Programming Certification Badge"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/ff6b6b/fff?text=Programming'">
+                        </div>
+                        <div class="certificate-text">
+                            <h3 class="cert-title">Python Essentials 1</h3>
+                            <p class="cert-issuer">Python Institute</p>
+                            <p class="cert-date">Coming Soon</p>
+                            <!-- Click indicator -->
+                            <div style="margin-top: 10px; display: flex; align-items: center; gap: 6px; color: #2563eb; font-size: 0.85rem; font-weight: 500;">
+                                <span>View Certificate</span>
+                                <i class="fa-solid fa-arrow-right" style="transition: transform 0.3s ease;"></i>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Card 7 - Programming Certification (PLANNED) -->
-                    <div class="certificate-card" data-category="programming">
-                        <div class="certificate-card-inner">
-                            <div class="certificate-image">
-                                <img src="images/cert7.png" 
-                                    alt="Programming Certification Badge"
-                                    onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/ff6b6b/fff?text=Programming'">
-                            </div>
-                            <div class="certificate-text">
-                                <h3 class="cert-title">Python Essentials 1</h3>
-                                <p class="cert-issuer">Python Institute</p>
-                                <p class="cert-date">Coming Soon</p>
-                            </div>
-                        </div>
-                    </div>
-
+                </div>
                     <!-- Empty state message (hidden when cards exist) -->
                     <div class="empty-certificates" style="display:none;">
                         <i class="fa-solid fa-cloud"></i>
